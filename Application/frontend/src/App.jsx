@@ -22,7 +22,8 @@ function App() {
   const handleLogin = async () => {
     try {
       const cleanId = studentId.toLowerCase().trim();
-      const res = await axios.post('http://127.0.0.1:5000/login', { student_id: cleanId })
+
+      const res = await axios.post('https://researchg45-production.up.railway.app/login', { student_id: cleanId })
       setName(res.data.name)
       setPreference(res.data.genre)
       setScreen('dashboard')
@@ -35,7 +36,8 @@ function App() {
     if (!preference || !name) return alert("Please fill all fields")
     try {
       const cleanId = studentId.toLowerCase().trim();
-      await axios.post('http://127.0.0.1:5000/register', { student_id: cleanId, name, genre: preference })
+
+      await axios.post('https://researchg45-production.up.railway.app/register', { student_id: cleanId, name, genre: preference })
       setScreen('dashboard')
     } catch {
       alert("Registration failed. ID might already exist.")
@@ -45,7 +47,8 @@ function App() {
   const handleUpdateGenre = async (newGenre) => {
     try {
         const cleanId = studentId.toLowerCase().trim();
-        await axios.post('http://127.0.0.1:5000/update_preference', { student_id: cleanId, genre: newGenre });
+
+        await axios.post('https://researchg45-production.up.railway.app/update_preference', { student_id: cleanId, genre: newGenre });
         setPreference(newGenre);
         setIsEditing(false);
     } catch {
@@ -57,11 +60,11 @@ function App() {
     setLoading(true);
     setResult(null); 
 
-    // Cinematic 3-second delay to simulate syncing and processing
+
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     try {
-      const res = await axios.post("https://researchg45-production.up.railway.app", { 
+      const res = await axios.post("https://researchg45-production.up.railway.app/predict_auto", { 
         student_id: studentId.toLowerCase().trim() 
       });
       setResult(res.data);
