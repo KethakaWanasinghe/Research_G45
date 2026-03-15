@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# Databases
+*.db
+*.sqlite3
+
+# Node modules (Frontend)
+frontend/node_modules/
+frontend/build/
+
+# Ignore live watch data testing folder contents, but keep the folder
+backend/Watch-data/*
+!backend/Watch-data/.gitkeep

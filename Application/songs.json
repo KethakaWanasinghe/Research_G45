@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "description": "HRV-Driven Music Therapy Database for Exam Stress Reduction",
+    "research_basis": "Bernardi et al. (2006); Trappe (2010); Thoma et al. (2013); Zhang et al. (2026)",
+    "bpm_logic": {
+      "high_stress": {
+        "rmssd_threshold": "< 20ms",
+        "lf_hf_threshold": "> 3.0",
+        "bpm_range": [55, 65],
+        "target": "Maximum parasympathetic activation - reduce acute distress"
+      },
+      "moderate_stress": {
+        "rmssd_threshold": "20-40ms",
+        "lf_hf_threshold": "1.5-3.0",
+        "bpm_range": [65, 80],
+        "target": "Eustress maintenance - keep alertness without panic"
+      },
+      "low_stress": {
+        "rmssd_threshold": "> 40ms",
+        "lf_hf_threshold": "< 1.5",
+        "bpm_range": null,
+        "target": "No intervention - preserve optimal cognitive arousal"
+      }
+    }
+  },
+
+  "genres": {
+
+    "Classical": {
+      "research_note": "Strongest evidence base. Baroque classical shown to stabilise heart rate and reduce acute distress (Trappe, 2010). Fastest autonomic recovery after stress (Thoma et al., 2013).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "cls_h_1",
+            "title": "Mozart for Brain Power - Complete Collection",
+            "artist": "HalidonMusic",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/Rb0UmrCXxVA",
+            "duration_min": 180,
+            "instrumental": true
+          },
+          {
+            "id": "cls_h_2",
+            "title": "Bach - Air on the G String & Relaxing Classical",
+            "artist": "HalidonMusic",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/5AaTCs7ulgg?si=dvZP-xa1CT3kXyfV",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "cls_h_3",
+            "title": "Debussy - Clair de Lune & Relaxing Piano",
+            "artist": "Piano Classics",
+            "bpm": 56,
+            "url": "https://www.youtube.com/embed/CvFH_6DNRCY",
+            "duration_min": 60,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 75],
+        "tracks": [
+          {
+            "id": "cls_m_1",
+            "title": "Vivaldi - Four Seasons Complete",
+            "artist": "HalidonMusic",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/GRxofEmo3HA",
+            "duration_min": 42,
+            "instrumental": true
+          },
+          {
+            "id": "cls_m_2",
+            "title": "Beethoven - Moonlight Sonata & Piano Classics",
+            "artist": "Piano Classics",
+            "bpm": 67,
+            "url": "https://www.youtube.com/embed/4Tr0otuiQuU",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "cls_m_3",
+            "title": "Chopin - Nocturnes Complete",
+            "artist": "HalidonMusic",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/IVpuTD-2SEo?si=CvY44QRaT67pP9yA",
+            "duration_min": 90,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Ambient": {
+      "research_note": "Nature-integrated soundscapes enhance parasympathetic tone and reduce stress. Most effective for acute high-stress states (Kumpulainen et al., 2025 as cited in Zhang et al., 2026).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "amb_h_1",
+            "title": "Dark Ambient Radio - Music to Escape/Dream to",
+            "artist": "Lofi Girl",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/S_MOd40zlYU?si=vjE0KrC_l_S45DUC",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "amb_h_2",
+            "title": "Peaceful Piano Radio - Music to Focus/Study to",
+            "artist": "Lofi Girl",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/DWcJFNfaw9c",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "amb_h_3",
+            "title": "Relaxing Ambient Music - Stress Relief",
+            "artist": "Soothing Relaxation",
+            "bpm": 55,
+            "url": "https://www.youtube.com/embed/1ZYbU82GVz4",
+            "duration_min": 180,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 75],
+        "tracks": [
+          {
+            "id": "amb_m_1",
+            "title": "Synthwave Radio - Beats to Chill/Game to",
+            "artist": "Lofi Girl",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/4xDzrJKXOOY",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "amb_m_2",
+            "title": "Space Ambient Music - Relaxing Universe",
+            "artist": "Soothing Relaxation",
+            "bpm": 65,
+            "url": "https://www.youtube.com/embed/Ii9fO5Y7SVo?si=70zKBf7ryzoE7QKm",
+            "duration_min": 120,
+            "instrumental": true
+          },
+          {
+            "id": "amb_m_3",
+            "title": "Ambient Study Music - Focus and Concentration",
+            "artist": "Greenred Productions",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/sjkrrmBnpGE",
+            "duration_min": 120,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Lo-Fi": {
+      "research_note": "Instrumental lo-fi hip hop at 60-80 BPM. Widely used by university students for focus and stress reduction. Tempo-driven cardiovascular entrainment (Bernardi et al., 2006).",
+      "high_stress": {
+        "bpm_range": [60, 68],
+        "tracks": [
+          {
+            "id": "lof_h_1",
+            "title": "Lofi Hip Hop Radio - Beats to Relax/Study to",
+            "artist": "Lofi Girl",
+            "bpm": 65,
+            "url": "https://www.youtube.com/embed/jfKfPfyJRdk",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "lof_h_2",
+            "title": "Lofi Hip Hop Radio - Beats to Sleep/Chill to",
+            "artist": "Lofi Girl",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/rUxyKA_-grg",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "lof_h_3",
+            "title": "Chillhop Essentials - Slow Lo-fi Beats",
+            "artist": "Chillhop Music",
+            "bpm": 63,
+            "url": "https://www.youtube.com/embed/7NOSDKb0HlU",
+            "duration_min": 60,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [68, 80],
+        "tracks": [
+          {
+            "id": "lof_m_1",
+            "title": "Chillhop Radio - Jazzy & Lo-fi Beats",
+            "artist": "Chillhop Music",
+            "bpm": 75,
+            "url": "https://www.youtube.com/embed/5yx6BWlEVcY",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "lof_m_2",
+            "title": "Lo-Fi Hip Hop Study Beats",
+            "artist": "College Music",
+            "bpm": 73,
+            "url": "https://www.youtube.com/embed/lTRiuFIWV54",
+            "duration_min": 9999,
+            "instrumental": true
+          },
+          {
+            "id": "lof_m_3",
+            "title": "Chill Lo-fi Hip Hop Mix",
+            "artist": "The Jazz Hop Cafe",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/kgx4WGK0oNU",
+            "duration_min": 60,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Jazz": {
+      "research_note": "Jazz showed largest stress reduction effect size (r=0.94) among all genres in university student study (IJFMR, 2025). Slow jazz at 65-75 BPM effective for eustress maintenance (Bernardi et al., 2006).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "jaz_h_1",
+            "title": "Relaxing Jazz - Smooth Piano Jazz for Sleep",
+            "artist": "Relaxing Jazz Cafe",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/Dx5qFachd3A",
+            "duration_min": 120,
+            "instrumental": true
+          },
+          {
+            "id": "jaz_h_2",
+            "title": "Slow Jazz Piano - Relaxing Cafe Music",
+            "artist": "Jazz & Blues Experience",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/DSGyEsJ17cI",
+            "duration_min": 120,
+            "instrumental": true
+          },
+          {
+            "id": "jaz_h_3",
+            "title": "Smooth Jazz Coffee Shop Radio",
+            "artist": "Dr. SaxLove",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/8eZQrnBBKIU?si=4N68XYeBchQjCuEa",
+            "duration_min": 9999,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 78],
+        "tracks": [
+          {
+            "id": "jaz_m_1",
+            "title": "Jazz Cafe Music - Background Bossa Nova Jazz",
+            "artist": "Cafe Music BGM Channel",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/Y-JQ-RCyPpQ?si=HGvrEptUPa5dDj62",
+            "duration_min": 180,
+            "instrumental": true
+          },
+          {
+            "id": "jaz_m_2",
+            "title": "Happy Upbeat Jazz - Positive Morning Music",
+            "artist": "Relax Cafe Music",
+            "bpm": 75,
+            "url": "https://www.youtube.com/embed/FjHGZj2IjBk",
+            "duration_min": 60,
+            "instrumental": true
+          },
+         {
+            "id": "jaz_m_3",
+            "title": "Bossa Nova Jazz - Study and Work Music",
+            "artist": "Cafe Music BGM",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/xi1LKpGcER0?si=qLCMDhRjbxQqtwjg",
+            "duration_min": 180,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Acoustic": {
+      "research_note": "Acoustic guitar/piano at 65-80 BPM produces parasympathetic activation through rhythmic entrainment without lyric-based cognitive load (Bernardi et al., 2006; Trappe, 2010).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "aco_h_1",
+            "title": "Relaxing Acoustic Guitar - Soft Background Music",
+            "artist": "Peder B. Helland",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/BTYAsjAVa3I",
+            "duration_min": 120,
+            "instrumental": true
+          },
+          {
+            "id": "aco_h_2",
+            "title": "Acoustic Chill - Mellow Guitar Instrumental",
+            "artist": "Ambient Worlds",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/36YnV9STBqc",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "aco_h_3",
+            "title": "Soft Acoustic Piano and Guitar",
+            "artist": "Greenred Productions",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/2OEL4P1Rz04",
+            "duration_min": 120,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 78],
+        "tracks": [
+          {
+            "id": "aco_m_1",
+            "title": "Acoustic Guitar Instrumental - Positive Energy",
+            "artist": "Peder B. Helland",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/HGl75kurxok",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "aco_m_2",
+            "title": "Uplifting Acoustic - Study and Focus Music",
+            "artist": "Yellow Brick Cinema",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/qYnA9wWFHLI",
+            "duration_min": 120,
+            "instrumental": true
+          },
+          {
+            "id": "aco_m_3",
+            "title": "Acoustic Country Guitar Instrumental",
+            "artist": "Legacy",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/4QhJuu4NnuQ",
+            "duration_min": 60,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Pop": {
+      "research_note": "Slow pop at 60-75 BPM produces fastest heart rate recovery time regardless of genre label. Tempo is primary therapeutic variable independent of genre (Bernardi et al., 2006). Instrumental only to avoid linguistic cognitive load.",
+      "high_stress": {
+        "bpm_range": [58, 65],
+        "tracks": [
+          {
+            "id": "pop_h_1",
+            "title": "Relaxing Pop Piano Covers - Instrumental Mix",
+            "artist": "Relax Music",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/f4cAt6X1jQo?si=s0Trwun6zd2-PqYO",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "pop_h_2",
+            "title": "Chill Pop Instrumental Hits - Slow Tempo",
+            "artist": "Chillout Lounge",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/htnobkrtDoo?si=0vGMbCJCsjXzkHS9",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "pop_h_3",
+            "title": "Soft Pop Piano - Sleep and Relax",
+            "artist": "Piano Pop Covers",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/E7EOjkGVmyo?si=Wg7X03U585MSDZUU",
+            "duration_min": 90,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 75],
+        "tracks": [
+          {
+            "id": "pop_m_1",
+            "title": "Happy Background Pop Music - Positive Vibes",
+            "artist": "Morning Music",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/6M5M2-Q2_0A",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "pop_m_2",
+            "title": "Upbeat Indie Pop Instrumental",
+            "artist": "Epidemic Sound",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/dh3bleXmNqw",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "pop_m_3",
+            "title": "Chill Pop Radio - Positive Instrumental Mix",
+            "artist": "Chill Nation",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/36YnV9STBqc",
+            "duration_min": 120,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "R&B": {
+      "research_note": "Slow R&B/Soul at 60-75 BPM activates parasympathetic nervous system through rhythmic entrainment. Preferred music yields superior HRV outcomes vs standardised music (Zhang et al., 2026).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "rnb_h_1",
+            "title": "Slow R&B Soul Mix - Relaxing Late Night",
+            "artist": "RnB Classics",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/MHATGZaEZGg",
+            "duration_min": 60,
+            "instrumental": false,
+            "note": "Vocal content - monitor cognitive load"
+          },
+          {
+            "id": "rnb_h_2",
+            "title": "Chill R&B Instrumental Beats",
+            "artist": "Soulful Vibes",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/7g6sDRFnjkU",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "rnb_h_3",
+            "title": "Neo Soul Radio - Smooth R&B Instrumental",
+            "artist": "Soul Music Radio",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/UhSpd5BnBBQ",
+            "duration_min": 9999,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 75],
+        "tracks": [
+          {
+            "id": "rnb_m_1",
+            "title": "Chill R&B and Neo Soul Beats",
+            "artist": "Lofi Girl",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/8EXcxBqX_iA",
+            "duration_min": 9999,
+            "instrumental": true,
+            "note": "Highly reliable 24/7 stream"
+          },
+          {
+            "id": "rnb_m_2",
+            "title": "Neo Soul Study Beats - R&B Instrumental",
+            "artist": "Soulful Vibes",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/eNBFGxsQpxo",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "rnb_m_3",
+            "title": "Upbeat R&B Instrumental Radio",
+            "artist": "RnB Classics",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/5yx6BWlEVcY",
+            "duration_min": 120,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Reggae": {
+      "research_note": "Reggae rhythm naturally sits at 60-80 BPM. The offbeat rhythm pattern (skank) promotes rhythmic entrainment with resting cardiovascular rate (Bernardi et al., 2006).",
+      "high_stress": {
+        "bpm_range": [60, 68],
+        "tracks": [
+          {
+            "id": "reg_h_1",
+            "title": "Reggae Sleep Music - Relaxing Island Vibes",
+            "artist": "Nuwaii",
+            "bpm": 63,
+            "url": "https://www.youtube.com/embed/WcW2sZXtH0Y",
+            "duration_min": 60,
+            "instrumental": false,
+            "note": "Minimal vocals"
+          },
+          {
+            "id": "reg_h_2",
+            "title": "Slow Reggae Instrumental - Chilled Roots",
+            "artist": "Reggae Chill",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/QkHAnDGYuFU",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "reg_h_3",
+            "title": "Relaxing Reggae Radio - Stress Relief",
+            "artist": "Island Vibes",
+            "bpm": 65,
+            "url": "https://www.youtube.com/embed/UUk01daytFY",
+            "duration_min": 9999,
+            "instrumental": false
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [68, 78],
+        "tracks": [
+          {
+            "id": "reg_m_1",
+            "title": "Upbeat Reggae Mix - Happy Island Music",
+            "artist": "Island Vibes",
+            "bpm": 73,
+            "url": "https://www.youtube.com/embed/v2lX32u1-5Q",
+            "duration_min": 60,
+            "instrumental": false
+          },
+          {
+            "id": "reg_m_2",
+            "title": "Classic Reggae Instrumental Mix",
+            "artist": "Reggae Chill",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/Y2lMHnSd77c",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "reg_m_3",
+            "title": "Positive Reggae Radio - Good Vibes Only",
+            "artist": "Tropical Vibes",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/kzpqMSFCnpw",
+            "duration_min": 9999,
+            "instrumental": false
+          }
+        ]
+      }
+    },
+
+    "Blues": {
+      "research_note": "Slow blues at 60-75 BPM shown to reduce sympathetic nervous system activity through slow harmonic progressions. Emotional resolution in blues structure reduces psychological tension (Bernardi et al., 2006).",
+      "high_stress": {
+        "bpm_range": [55, 65],
+        "tracks": [
+          {
+            "id": "blu_h_1",
+            "title": "Slow Blues Guitar - Relaxing Blue Night",
+            "artist": "Relaxing Blues",
+            "bpm": 60,
+            "url": "https://www.youtube.com/embed/71Gt46aX9Z4",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "blu_h_2",
+            "title": "Late Night Blues - Slow Instrumental Mix",
+            "artist": "Blues Masters",
+            "bpm": 58,
+            "url": "https://www.youtube.com/embed/xqRqUKiHtAA",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "blu_h_3",
+            "title": "Delta Blues Radio - Slow and Soulful",
+            "artist": "Blues Radio",
+            "bpm": 62,
+            "url": "https://www.youtube.com/embed/dyTtR6KNGW0",
+            "duration_min": 9999,
+            "instrumental": false
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": [65, 75],
+        "tracks": [
+          {
+            "id": "blu_m_1",
+            "title": "Groovy Blues Rock - Medium Tempo Mix",
+            "artist": "Blues Masters",
+            "bpm": 70,
+            "url": "https://www.youtube.com/embed/wzJ82-i3T4c",
+            "duration_min": 60,
+            "instrumental": true
+          },
+          {
+            "id": "blu_m_2",
+            "title": "Chicago Blues Radio - Classic Blues Mix",
+            "artist": "Blues Radio",
+            "bpm": 68,
+            "url": "https://www.youtube.com/embed/GpEaWOciXvg",
+            "duration_min": 9999,
+            "instrumental": false
+          },
+          {
+            "id": "blu_m_3",
+            "title": "Electric Blues Instrumental - Upbeat Mix",
+            "artist": "Relaxing Blues",
+            "bpm": 72,
+            "url": "https://www.youtube.com/embed/6aKPLTCCB_A",
+            "duration_min": 60,
+            "instrumental": true
+          }
+        ]
+      }
+    },
+
+    "Nature Sounds": {
+      "research_note": "Nature-integrated soundscapes significantly enhance parasympathetic tone and RMSSD. Tibetan singing bowls and nature sounds shown to increase RMSSD and HF power within 30 min (Rio-Alamos et al., 2023 as cited in Zhang et al., 2026). Most effective genre for acute high-stress intervention.",
+      "high_stress": {
+        "bpm_range": null,
+        "note": "No BPM - entrainment via natural rhythmic patterns",
+        "tracks": [
+          {
+            "id": "nat_h_1",
+            "title": "Rain and Thunder Sounds - Deep Sleep and Relaxation",
+            "artist": "Soothing Relaxation",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/yIQd2Ya0Ziw",
+            "duration_min": 480,
+            "instrumental": true
+          },
+          {
+            "id": "nat_h_2",
+            "title": "Forest Birds and Stream - Nature Sounds",
+            "artist": "Nature Healing Society",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/xNN7iTA57jM",
+            "duration_min": 180,
+            "instrumental": true
+          },
+          {
+            "id": "nat_h_3",
+            "title": "Ocean Waves for Sleep - Calming Sea Sounds",
+            "artist": "Soothing Relaxation",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/bt9BNLMpbPs",
+            "duration_min": 480,
+            "instrumental": true
+          }
+        ]
+      },
+      "moderate_stress": {
+        "bpm_range": null,
+        "note": "No BPM - entrainment via natural rhythmic patterns",
+        "tracks": [
+          {
+            "id": "nat_m_1",
+            "title": "Peaceful Forest with Birds - Morning Nature Sounds",
+            "artist": "Nature Soundscapes",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/eKFTSSKCzWA",
+            "duration_min": 180,
+            "instrumental": true
+          },
+          {
+            "id": "nat_m_2",
+            "title": "Light Rain on Leaves - Gentle Nature Ambience",
+            "artist": "Nature Healing Society",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/q76bMs-NwRk",
+            "duration_min": 240,
+            "instrumental": true
+          },
+          {
+            "id": "nat_m_3",
+            "title": "Flowing River Sounds - Relaxing Water",
+            "artist": "Relaxing Soundscapes",
+            "bpm": null,
+            "url": "https://www.youtube.com/embed/V-_O7nl0Ii0",
+            "duration_min": 180,
+            "instrumental": true
+          }
+        ]
+      }
+    }
+
+  }
+}
