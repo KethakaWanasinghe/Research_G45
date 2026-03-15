@@ -61,7 +61,7 @@ function App() {
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     try {
-      const res = await axios.post("researchg45-production.up.railway.app", { 
+      const res = await axios.post("https://researchg45-production.up.railway.app", { 
         student_id: studentId.toLowerCase().trim() 
       });
       setResult(res.data);
