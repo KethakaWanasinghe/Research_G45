@@ -61,7 +61,7 @@ function App() {
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict_auto", { 
+      const res = await axios.post("researchg45-production.up.railway.app", { 
         student_id: studentId.toLowerCase().trim() 
       });
       setResult(res.data);
