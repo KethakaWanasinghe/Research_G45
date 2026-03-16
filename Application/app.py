@@ -10,6 +10,7 @@ import os
 import glob
 from scipy.signal import lombscargle
 import warnings
+import sqlite3
 
 warnings.filterwarnings('ignore')
 
@@ -31,6 +32,20 @@ def get_db_connection():
     conn = sqlite3.connect('exam_stress.db')
     conn.row_factory = sqlite3.Row  
     return conn
+
+def init_db():
+    conn = get_db_connection()
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS students (
+            student_id TEXT PRIMARY KEY,
+            name TEXT NOT NULL,
+            genre TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+init_db()    
 
 def get_music_recommendation(stress_label, user_genre):
     with open('songs.json', 'r', encoding='utf-8') as f:
