@@ -29,7 +29,9 @@ except Exception as e:
     print(f"CRITICAL ERROR loading models: {e}")
 
 def get_db_connection():
-    conn = sqlite3.connect('exam_stress.db')
+    # If Railway's permanent volume exists, use it. Otherwise, use local folder.
+    db_path = '/app/data/exam_stress.db' if os.path.exists('/app/data') else 'exam_stress.db'
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row  
     return conn
 
@@ -69,7 +71,7 @@ def get_music_recommendation(stress_label, user_genre):
             actual_genre = key
             break
             
-    # 3. FALLBACK GENRE
+    # FALLBACK GENRE
     if not genre_data:
         actual_genre = list(genres_dict.keys())[0] if genres_dict else "Unknown"
         genre_data = genres_dict.get(actual_genre, {})
@@ -128,8 +130,8 @@ def extract_features(timestamps, rr_intervals):
     pgram = lombscargle(t_clean, rr_clean - np.mean(rr_clean), w, normalize=False)
     psd = pgram * 2.0 / len(t_clean)
     
-    lf = np.trapz(psd[(f >= 0.04) & (f < 0.15)], f[(f >= 0.04) & (f < 0.15)])
-    hf = np.trapz(psd[(f >= 0.15) & (f <= 0.4)], f[(f >= 0.15) & (f <= 0.4)])
+    lf = np.trapezoid(psd[(f >= 0.04) & (f < 0.15)], f[(f >= 0.04) & (f < 0.15)])
+    hf = np.trapezoid(psd[(f >= 0.15) & (f <= 0.4)], f[(f >= 0.15) & (f <= 0.4)])
     
     lf = max(lf, 0.001)
     hf = max(hf, 0.001)
