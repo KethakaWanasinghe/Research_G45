@@ -130,8 +130,8 @@ def extract_features(timestamps, rr_intervals):
     pgram = lombscargle(t_clean, rr_clean - np.mean(rr_clean), w, normalize=False)
     psd = pgram * 2.0 / len(t_clean)
     
-    lf = np.trapezoid(psd[(f >= 0.04) & (f < 0.15)], f[(f >= 0.04) & (f < 0.15)])
-    hf = np.trapezoid(psd[(f >= 0.15) & (f <= 0.4)], f[(f >= 0.15) & (f <= 0.4)])
+    lf = np.trapz(psd[(f >= 0.04) & (f < 0.15)], f[(f >= 0.04) & (f < 0.15)])
+    hf = np.trapz(psd[(f >= 0.15) & (f <= 0.4)], f[(f >= 0.15) & (f <= 0.4)])
     
     lf = max(lf, 0.001)
     hf = max(hf, 0.001)
