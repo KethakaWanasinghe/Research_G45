@@ -3,5 +3,6 @@ Flask-Cors
 pandas
 numpy
 scikit-learn
+numpy<2.0.0
 scipy
 gunicorn
