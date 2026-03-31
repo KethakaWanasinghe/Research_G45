@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+np.trapz = np.trapezoid
 import joblib
 import os
 from scipy.signal import lombscargle
