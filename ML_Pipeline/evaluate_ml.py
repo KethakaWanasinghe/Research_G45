@@ -186,20 +186,20 @@ for model_name, metrics in models_results:
     print(f"{model_name:<25} | {metrics['acc']:.2f}%      | {metrics['prec']:.2f}%      | {metrics['rec']:.2f}%      | {metrics['f1']:.3f}")
 
 # 2. Print Train vs Val Loss Table
-print(f"\n[TABLE 2: Training vs. Validation (Overfitting Analysis)]")
-print(f"{'Model Name':<25} | {'Train Accuracy':<15} | {'Train Loss':<12} | {'Val Accuracy':<12} | {'Val Loss':<10}")
-print("-" * 85)
-table_data = []
-for model_name, metrics in results_loss.items():
-    t_acc = np.mean(metrics['train_acc']) * 100
-    v_acc = np.mean(metrics['val_acc']) * 100
-    t_loss = np.mean(metrics['train_loss'])
-    v_loss = np.mean(metrics['val_loss'])
-    table_data.append((model_name, t_acc, t_loss, v_acc, v_loss))
+# print(f"\n[TABLE 2: Training vs. Validation (Overfitting Analysis)]")
+# print(f"{'Model Name':<25} | {'Train Accuracy':<15} | {'Train Loss':<12} | {'Val Accuracy':<12} | {'Val Loss':<10}")
+# print("-" * 85)
+# table_data = []
+# for model_name, metrics in results_loss.items():
+#     t_acc = np.mean(metrics['train_acc']) * 100
+#     v_acc = np.mean(metrics['val_acc']) * 100
+#     t_loss = np.mean(metrics['train_loss'])
+#     v_loss = np.mean(metrics['val_loss'])
+#     table_data.append((model_name, t_acc, t_loss, v_acc, v_loss))
 
-table_data.sort(key=lambda x: x[3], reverse=True)
-for row in table_data:
-    print(f"{row[0]:<25} | {row[1]:.2f}%          | {row[2]:.4f}       | {row[3]:.2f}%       | {row[4]:.4f}")
+# table_data.sort(key=lambda x: x[3], reverse=True)
+# for row in table_data:
+#     print(f"{row[0]:<25} | {row[1]:.2f}%          | {row[2]:.4f}       | {row[3]:.2f}%       | {row[4]:.4f}")
 print("============================================================")
 
 best_model_name = models_results[0][0]
